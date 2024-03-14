@@ -1,0 +1,65 @@
+package targetSistemas;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public class FibonacciSequence {
+	    // Método para verificar se um número pertence à sequência de Fibonacci
+	    public static boolean isFibonacci(int n) {
+	        // Inicializa os primeiros dois números da sequência de Fibonacci
+	        int a = 0;
+	        int b = 1;
+	        
+	        // Verifica se o número é um dos primeiros dois números da sequência
+	        if (n == a || n == b) {
+	            return true;
+	        }
+	        
+	        // Calcula os números seguintes da sequência de Fibonacci até encontrar um número maior ou igual a n
+	        while (b < n) {
+	            int temp = a + b;
+	            a = b;
+	            b = temp;
+	            
+	            // Se encontrarmos o número n, retorna verdadeiro
+	            if (b == n) {
+	                return true;
+	            }
+	        }
+	        
+	        // Se não encontrarmos o número n, retorna falso
+	        return false;
+	    }
+	    
+	    // Método para calcular o número na posição n da sequência de Fibonacci
+	    public static int fibonacci(int n) {
+	        if (n <= 1) {
+	            return n;
+	        }
+	        return fibonacci(n - 1) + fibonacci(n - 2);
+	    }
+	    
+	    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        System.out.print("Digite um número para verificar se pertence à sequência de Fibonacci: ");
+	        int number = scanner.nextInt();
+	        
+	        boolean isFibonacci = isFibonacci(number);
+	        if (isFibonacci) {
+	            System.out.println(number + " pertence à sequência de Fibonacci.");
+	        } else {
+	            System.out.println(number + " não pertence à sequência de Fibonacci.");
+	        }
+	        
+	        // Exibir os primeiros 10 números da sequência de Fibonacci para referência
+	        System.out.println("Os primeiros 10 números da sequência de Fibonacci são:");
+	        for (int i = 0; i < 10; i++) {
+	            System.out.print(fibonacci(i) + " ");
+	        }
+	    }
+	}
+	
+	
+
+}
