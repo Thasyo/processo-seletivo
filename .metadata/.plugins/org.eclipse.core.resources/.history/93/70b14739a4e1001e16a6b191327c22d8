@@ -21,12 +21,12 @@ public class Main {
             System.out.println(number + " não pertence à sequência de Fibonacci.");
         }
         
-        System.out.print("Agora, escreva uma palavra para fazer a inversão da mesma: ");
-        String word = sc.next();
+        System.out.println("Agora, escreva uma palavra para fazer a inversão da mesma: ");
+        String word = sc.nextLine();
         
         String newWord = InvertString.inverterString(word);
         
-        System.out.println(word + " => " + newWord);
+        System.out.println(newWord);
         
         sc.close();
         

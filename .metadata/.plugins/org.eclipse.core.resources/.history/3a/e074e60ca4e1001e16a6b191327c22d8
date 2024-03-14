@@ -2,7 +2,6 @@ package targetSistemas;
 
 import java.util.Scanner;
 import targetSistemas.Fibonacci;
-import targetSistemas.InvertString;
 
 public class Main {
     
@@ -20,13 +19,6 @@ public class Main {
         } else {
             System.out.println(number + " não pertence à sequência de Fibonacci.");
         }
-        
-        System.out.print("Agora, escreva uma palavra para fazer a inversão da mesma: ");
-        String word = sc.next();
-        
-        String newWord = InvertString.inverterString(word);
-        
-        System.out.println(word + " => " + newWord);
         
         sc.close();
         
